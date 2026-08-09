@@ -1,45 +1,48 @@
-# AI study 월간 요약
+**English** | [한국어](README.ko.md)
 
-`AI study` 대화를 **월별**로 요약해 관리하는 저장소입니다.
-AI / ML / 모델 관점의 **동향, 새로운 소식, 견해**에 초점을 맞춥니다.
+# AI study Monthly Digest
 
-## 포함 / 제외 기준
+A repository that summarizes `AI study` discussions **month by month**,
+focused on **trends, new releases, and perspectives** from an AI / ML / model standpoint.
 
-**포함**
-- AI/ML/모델 관련 동향과 트렌드
-- 새로운 소식(모델·논문·도구·벤치마크 릴리스, 뉴스)
-- 참여자들의 의미있는 견해와 토론
+## What's In / Out
 
-**제외**
-- 특정 강사가 발표하는 강의/세미나 안내
-- 홍보성 내용(대회·행사·채용·제품 광고)
-- 개인의 일상 공유(사진, 잡담, 인사 등)
+**Included**
+- AI/ML/model trends and currents
+- New releases (models, papers, tools, benchmarks) and news
+- Substantive perspectives and debates from the discussion
 
-**표기 원칙 (공개용)**
-- 채팅 참여자의 **발언자 표기(이름·소속·핸들)를 남기지 않는다.** 견해·논의는 "누가 말했는지" 없이 내용만 정리한다.
-- 뉴스·논문 등에 인용된 외부 공인 및 기업/기관/모델명은 원래 표기를 유지한다.
+**Excluded**
+- Course/seminar announcements by individual instructors
+- Promotional content (contests, events, recruiting, product ads)
+- Personal daily chatter (photos, small talk, greetings)
 
-## 파일 구조
+**Attribution policy (public)**
+- **No speaker attribution** for participants (no names, affiliations, or handles). Opinions and debates are summarized by content only, without "who said it."
+- Public figures cited in news/papers, and company/organization/model names, are kept as-is.
 
-- `YYYY-MM.md` — 해당 월의 요약
-- `raw/`, `KakaoTalkChats*.txt` — 원본 대화 내보내기(커밋 제외, `.gitignore`)
+## File Layout
 
-## 요약 목록
+- `YYYY-MM.md` — monthly summary (Korean)
+- `YYYY-MM.en.md` — monthly summary (English)
+- `raw/`, `KakaoTalkChats*.txt` — raw chat export (not committed, see `.gitignore`)
 
-| 월 | 요약 |
-|----|------|
-| 2025-12 | [2025년 12월](2025-12.md) |
-| 2026-01 | [2026년 1월](2026-01.md) |
-| 2026-02 | [2026년 2월](2026-02.md) |
-| 2026-03 | [2026년 3월](2026-03.md) |
-| 2026-04 | [2026년 4월](2026-04.md) |
-| 2026-05 | [2026년 5월](2026-05.md) |
-| 2026-06 | [2026년 6월](2026-06.md) |
-| 2026-07 | [2026년 7월](2026-07.md) |
-| 2026-08 | [2026년 8월 (부분)](2026-08.md) |
+## Index
 
-## 업데이트 방법
+| Month | Summary |
+|-------|---------|
+| 2025-12 | [December 2025](2025-12.en.md) |
+| 2026-01 | [January 2026](2026-01.en.md) |
+| 2026-02 | [February 2026](2026-02.en.md) |
+| 2026-03 | [March 2026](2026-03.en.md) |
+| 2026-04 | [April 2026](2026-04.en.md) |
+| 2026-05 | [May 2026](2026-05.en.md) |
+| 2026-06 | [June 2026](2026-06.en.md) |
+| 2026-07 | [July 2026](2026-07.en.md) |
+| 2026-08 | [August 2026 (partial)](2026-08.en.md) |
 
-1. 카카오톡에서 대화 내보내기(`.txt`)를 받는다.
-2. 새로 추가된 기간을 월별로 요약해 `YYYY-MM.md`에 반영한다.
-3. `git add . && git commit` 으로 변경 이력을 남긴다.
+## How to Update
+
+1. Get the chat export (`.txt`).
+2. Summarize the new period month by month into `YYYY-MM.md` (and `YYYY-MM.en.md`).
+3. Commit and push: `git add . && git commit && git push`.
