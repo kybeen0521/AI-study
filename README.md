@@ -43,6 +43,27 @@ focused on **trends, new releases, and perspectives** from an AI / ML / model st
 
 ## How to Update
 
-1. Get the chat export (`.txt`).
-2. Summarize the new period month by month into `YYYY-MM.md` (and `YYYY-MM.en.md`).
-3. Commit and push: `git add . && git commit && git push`.
+The export always contains the **full** conversation, so already-summarized
+messages are filtered out automatically by `scripts/parse_kakao.py`, which
+tracks the timestamp of the last processed message in a state file
+(`.kakao_state.json`).
+
+1. Drop the chat export into the repo root as `KakaoTalkChats.txt`.
+2. Extract only the new messages, grouped by month:
+   ```bash
+   python scripts/parse_kakao.py KakaoTalkChats.txt
+   ```
+   This writes `raw/pending/YYYY-MM.txt` for each month with new messages (state is left untouched).
+3. Summarize `raw/pending/*.txt` into `YYYY-MM.md` (and `YYYY-MM.en.md`).
+4. Once summarized, advance the state and clear pending:
+   ```bash
+   python scripts/parse_kakao.py --advance
+   ```
+5. Commit and push: `git add . && git commit && git push`.
+
+**Options**
+- `--all` — re-extract everything, ignoring state (for initial build / rebuild)
+- `--since YYYY-MM-DD` — override the cutoff for this run only
+
+The export format (PC / Android / iOS) is auto-detected; date separators and
+join/leave system notices are dropped automatically.

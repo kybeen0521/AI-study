@@ -43,6 +43,26 @@ AI / ML / 모델 관점의 **동향, 새로운 소식, 견해**에 초점을 맞
 
 ## 업데이트 방법
 
-1. 대화 내보내기(`.txt`)를 받는다.
-2. 새로 추가된 기간을 월별로 요약해 `YYYY-MM.md`(및 `YYYY-MM.en.md`)에 반영한다.
-3. `git add . && git commit && git push` 로 변경 이력을 남긴다.
+내보내기 파일은 **항상 전체 대화**를 담고 있으므로, 이미 요약한 부분은
+`scripts/parse_kakao.py`가 상태 파일(`.kakao_state.json`, 마지막으로 처리한
+메시지 시각)을 기준으로 자동으로 걸러낸다.
+
+1. 대화 내보내기(`.txt`)를 저장소 루트에 `KakaoTalkChats.txt`로 둔다.
+2. 새 메시지만 월별로 추출한다:
+   ```bash
+   python scripts/parse_kakao.py KakaoTalkChats.txt
+   ```
+   → 새 메시지가 있는 달만 `raw/pending/YYYY-MM.txt`로 생성된다(상태는 아직 그대로).
+3. `raw/pending/*.txt`를 월별로 요약해 `YYYY-MM.md`(및 `YYYY-MM.en.md`)에 반영한다.
+4. 요약이 끝나면 상태를 전진시키고 pending을 정리한다:
+   ```bash
+   python scripts/parse_kakao.py --advance
+   ```
+5. `git add . && git commit && git push` 로 변경 이력을 남긴다.
+
+**옵션**
+- `--all` : 상태를 무시하고 전체를 다시 추출(초기 구축·재빌드용)
+- `--since YYYY-MM-DD` : 이번 실행에 한해 기준 시각을 직접 지정
+
+내보내기 포맷은 PC/안드로이드/iOS를 자동 감지하며, 날짜 구분 줄과
+입장·퇴장 시스템 메시지는 자동으로 제외된다.
