@@ -39,7 +39,8 @@ focused on **trends, new releases, and perspectives** from an AI / ML / model st
 | 2026-05 | [May 2026](2026-05.en.md) |
 | 2026-06 | [June 2026](2026-06.en.md) |
 | 2026-07 | [July 2026](2026-07.en.md) |
-| 2026-08 | [August 2026 (through 08-23)](2026-08.en.md) |
+| 2026-08 | [August 2026](2026-08.en.md) |
+| 2026-09 | [September 2026 (through 09-01)](2026-09.en.md) |
 
 ## How to Update
 
