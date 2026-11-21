@@ -44,6 +44,14 @@ focused on **trends, new releases, and perspectives** from an AI / ML / model st
 | 2026-10 | [October 2026](2026-10.en.md) |
 | 2026-11 | [November 2026 (through 11-21)](2026-11.en.md) |
 
+## Topic Notes
+
+In-depth notes on specific topics, kept separately from the monthly digests in `notes/` (Korean only).
+
+| Date | Note |
+|------|------|
+| 2026-11 | [The claimed Riemann Hypothesis proof (Alpöge × Claude)](notes/riemann-hypothesis-2026-11.md) |
+
 ## How to Update
 
 The export always contains the **full** conversation, so already-summarized
